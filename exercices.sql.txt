@@ -1,0 +1,21 @@
+
+ex1. ALTER TABLE `webdevelopment`.`languages`
+     ADD COLUMN `version` VARCHAR(255);
+
+ex2. ALTER TABLE `webdevelopment`.`frameworks`
+     ADD COLUMN `version` INT;
+
+ex3. ALTER TABLE `webdevelopment`.`languages`
+     RENAME COLUMN `versions` `version`
+
+// CHANGE ancien_nom nouveau_nom type;
+ex4. ALTER TABLE `webdevelopment`.`frameworks` CHANGE `versions` `version` INT;
+
+
+ex5. ALTER TABLE `webdevelopment`.`frameworks` MODIFY `version` VARCHAR(10);
+
+TP. ALTER TABLE `codex`.`clients` DROP COLUMN `secondPhoneNumber`;
+    ALTER TABLE `codex`.`clients` CHANGE `firstPhoneNumber` `phoneNumber` INT;
+    ALTER TABLE `codex`.`clients` MODIFY `phoneNumber` VARCHAR(8);
+    ALTER TABLE `codex`.`clients` ADD COLUMN `zipCode` VARCHARR(5);
+    ALTER TABLE `codex`.`clients` ADD `city` VARCHAR(30);
